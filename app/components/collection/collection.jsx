@@ -19,7 +19,7 @@ const collections = [
     id: 3,
     title: "",
     href: '/collection/nabeeha',
-    image: '/collection-banner.png',
+    image: '/collection-banner-JN.png',
   },
 ]
 

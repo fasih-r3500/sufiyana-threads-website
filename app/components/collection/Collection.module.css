@@ -111,6 +111,10 @@
   .card {
     height: 420px;
   }
+
+  .cardContent {
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 640px) {
