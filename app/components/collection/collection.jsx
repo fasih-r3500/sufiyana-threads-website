@@ -5,19 +5,19 @@ import styles from './Collection.module.css'
 const collections = [
   {
     id: 1,
-    title: "Nabeeha's Collection",
+    // title: "",
     href: '/collection/nabeeha',
-    image: '/collection-banner.png',
+    image: '/collection-banner-NB.png',
   },
   {
     id: 2,
-    title: "Nabeeha's Collection",
+    title: "",
     href: '/collection/nabeeha',
-    image: '/collection-banner.png',
+    image: '/collection-banner-AT.png',
   },
   {
     id: 3,
-    title: "Nabeeha's Collection",
+    title: "",
     href: '/collection/nabeeha',
     image: '/collection-banner.png',
   },

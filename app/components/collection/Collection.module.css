@@ -35,14 +35,14 @@
 .image {
   object-fit: cover;
   object-position: center;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   transition:
     filter 0.4s ease,
     transform 0.4s ease;
 }
 
 .card:hover .image {
-  filter: grayscale(60%);
+  filter: grayscale(50%);
   transform: scale(1.04);
 }
 
@@ -50,13 +50,13 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0);
   transition: background 0.4s ease;
   z-index: 1;
 }
 
 .card:hover .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 /* ── Card content ── */
@@ -67,7 +67,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 120px;
   gap: 0.75rem;
 }
 
@@ -82,7 +83,7 @@
 }
 
 .exploreLink {
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #997c3c;
   letter-spacing: 0.08em;
