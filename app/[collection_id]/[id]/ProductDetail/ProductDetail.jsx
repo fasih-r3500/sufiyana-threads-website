@@ -12,6 +12,10 @@ export default function ProductDetail({ product }) {
 
   return (
     <div className={styles.page}>
+      <div className={styles.collection} onClick={() => window.location.href = `/${product.collection_code}`}>
+        ← To {product.collection_name}
+      </div>
+
       <div className={styles.container}>
         {/* ── Left — Image gallery ── */}
         <div className={styles.gallery}>

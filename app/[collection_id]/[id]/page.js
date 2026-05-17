@@ -50,8 +50,10 @@
     const formatted_product = {
       id: product.id,
       sku: product.sku,
-      name: product.sku, // using SKU as name for now since DB doesn't have a name field
+      name: product.sku, // using SKU as name
       category: product.category,
+      collection_name: product.collection_name,
+      collection_code: product.collection_code,
       price: product.price,
       description: product.description,
       rating: product.rating,

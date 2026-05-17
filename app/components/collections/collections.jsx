@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './Collection.module.css'
+import styles from './Collections.module.css'
 
 const collections = [
   {

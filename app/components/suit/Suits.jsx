@@ -135,6 +135,7 @@ export default function Suits({ products = [] }) {
             id={product.id}
             image={product.image}
             category={product.category}
+            collection_code={product.collection_code}
             name={product.name}
             rating={product.rating}
             price={product.price}

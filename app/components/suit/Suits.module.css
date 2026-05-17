@@ -91,6 +91,7 @@
   background-color: #09090b;
   color: #997c3c;
 }
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .grid {
@@ -111,7 +112,7 @@
 @media (max-width: 480px) {
   .section {
     padding: 0rem 0rem;
-    margin: 0px 0px;
+    margin: 0px 0px 30px;
   }
 
   .grid {
