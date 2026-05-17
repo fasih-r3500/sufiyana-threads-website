@@ -123,7 +123,7 @@ export default function Navbar() {
                 src="/logo.png"
                 alt="YourBrand logo"
                 width={180}
-                height={60}
+                height={50}
                 priority
               />
             </Link>
