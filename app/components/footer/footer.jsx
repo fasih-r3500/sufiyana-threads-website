@@ -20,9 +20,9 @@ export default function Footer() {
         <div className={styles.column}>
           <h4 className={styles.colHeading}>Karachi</h4>
           <ul className={styles.list}>
-            <li>loremispm@gmail.com</li>
-            <li>+2325248223</li>
-            <li>Address: Lorem Ipsum is simply dummy</li>
+            <li>info@sufiyanathreads.com</li>
+            <li>+92 336 8047674</li>
+            <li>Clifton, Karachi</li>
           </ul>
         </div>
 
@@ -53,24 +53,24 @@ export default function Footer() {
           <h4 className={styles.colHeading}>Follow Us</h4>
           <ul className={styles.list}>
             <li>
-              <Link href="#" className={styles.link}>
+              <Link href="https://www.instagram.com/sufiyanathreads/" className={styles.link}>
                 Instagram
               </Link>
             </li>
             <li>
-              <Link href="#" className={styles.link}>
+              <Link href="https://www.facebook.com/people/Sufiyana-Threads/61585801809457/" className={styles.link}>
                 Facebook
               </Link>
             </li>
             <li>
-              <Link href="#" className={styles.link}>
+              <Link href="https://www.tiktok.com/@sufiyanathreads" className={styles.link}>
                 Tiktok
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Follow Us 2 */}
+        {/* Follow Us 2
         <div className={styles.column}>
           <h4 className={styles.colHeading}>Follow Us</h4>
           <ul className={styles.list}>
@@ -90,7 +90,7 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </footer>
   )
