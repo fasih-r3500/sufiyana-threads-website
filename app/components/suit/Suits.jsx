@@ -4,101 +4,101 @@ import { useState } from 'react'
 import styles from './Suits.module.css'
 import Card from '@/app/utlis/Card/Card'
 
-const categories = ['All', 'Suits', 'Shawl']
+const categories = ['All', '3-PIECE-SUIT', '2-PIECE-SUIT']
 
-const allProducts = [
-  {
-    id: "ST-NB-001",
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Embroidered Lawn Suit',
-    rating: 4,
-    price: 8500,
-  },
-  {
-    id: 2,
-    image: '/suit.png',
-    category: 'Shawl',
-    name: 'Kashmiri Wool Shawl',
-    rating: 5,
-    price: 12000,
-  },
-  {
-    id: 3,
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Printed Chiffon Suit',
-    rating: 3,
-    price: 7200,
-  },
-  {
-    id: 4,
-    image: '/suit.png',
-    category: 'Shawl',
-    name: 'Pashmina Shawl',
-    rating: 5,
-    price: 15000,
-  },
-  {
-    id: 5,
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Silk Embroidered Suit',
-    rating: 4,
-    price: 11000,
-  },
-  {
-    id: 6,
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Cotton Printed Suit',
-    rating: 3,
-    price: 5500,
-  },
-  {
-    id: 7,
-    image: '/suit.png',
-    category: 'Shawl',
-    name: 'Woven Silk Shawl',
-    rating: 4,
-    price: 9800,
-  },
-  {
-    id: 8,
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Organza Formal Suit',
-    rating: 5,
-    price: 18500,
-  },
-  {
-    id: 9,
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Organza Formal Suit',
-    rating: 5,
-    price: 18500,
-  },
-  {
-    id: 10,
-    image: '/suit.png',
-    category: 'Suits',
-    name: 'Organza Formal Suit',
-    rating: 5,
-    price: 18500,
-  },
-]
+// const allProducts = [
+//   {
+//     id: "ST-NB-001",
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Embroidered Lawn Suit',
+//     rating: 4,
+//     price: 8500,
+//   },
+//   {
+//     id: 2,
+//     image: '/suit.png',
+//     category: 'Shawl',
+//     name: 'Kashmiri Wool Shawl',
+//     rating: 5,
+//     price: 12000,
+//   },
+//   {
+//     id: 3,
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Printed Chiffon Suit',
+//     rating: 3,
+//     price: 7200,
+//   },
+//   {
+//     id: 4,
+//     image: '/suit.png',
+//     category: 'Shawl',
+//     name: 'Pashmina Shawl',
+//     rating: 5,
+//     price: 15000,
+//   },
+//   {
+//     id: 5,
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Silk Embroidered Suit',
+//     rating: 4,
+//     price: 11000,
+//   },
+//   {
+//     id: 6,
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Cotton Printed Suit',
+//     rating: 3,
+//     price: 5500,
+//   },
+//   {
+//     id: 7,
+//     image: '/suit.png',
+//     category: 'Shawl',
+//     name: 'Woven Silk Shawl',
+//     rating: 4,
+//     price: 9800,
+//   },
+//   {
+//     id: 8,
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Organza Formal Suit',
+//     rating: 5,
+//     price: 18500,
+//   },
+//   {
+//     id: 9,
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Organza Formal Suit',
+//     rating: 5,
+//     price: 18500,
+//   },
+//   {
+//     id: 10,
+//     image: '/suit.png',
+//     category: 'Suits',
+//     name: 'Organza Formal Suit',
+//     rating: 5,
+//     price: 18500,
+//   },
+// ]
 
 const ITEMS_PER_PAGE = 8
 
-export default function Suits() {
+export default function Suits({ products = [] }) {
   const [activeCategory, setActiveCategory] = useState('All')
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE)
 
   const filtered =
     activeCategory === 'All'
-      ? allProducts
-      : allProducts.filter((p) => p.category === activeCategory)
+      ? products
+      : products.filter((p) => p.category === activeCategory)
 
   const visibleProducts = filtered.slice(0, visibleCount)
   const hasMore = visibleCount < filtered.length
