@@ -2,9 +2,9 @@ import Image from 'next/image'
 import styles from './Card.module.css'
 import Link from 'next/link'
 
-export default function Card({ id, image, category, name, rating, price }) {
+export default function Card({ id, image, category, collection_code, name, rating, price }) {
   return (
-    <Link href={`/product/${id}`} className={styles.card}>
+    <Link href={`/${collection_code}/${id}`} className={styles.card}>
       <div className={styles.imageWrap}>
         <Image src={image} alt={name} fill className={styles.image} />
       </div>
