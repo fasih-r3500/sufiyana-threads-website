@@ -68,7 +68,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   gap: 0.75rem;
 }
 
@@ -113,7 +113,7 @@
   }
 
   .cardContent {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 }
 
