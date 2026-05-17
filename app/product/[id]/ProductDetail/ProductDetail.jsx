@@ -76,7 +76,7 @@ export default function ProductDetail({ product }) {
           <div className={styles.divider} />
 
           {/* Color selector */}
-          <div className={styles.selectorGroup}>
+          {/* <div className={styles.selectorGroup}>
             <p className={styles.selectorLabel}>
               Color{' '}
               <span className={styles.selectorValue}>
@@ -93,7 +93,7 @@ export default function ProductDetail({ product }) {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Size selector */}
           <div className={styles.selectorGroup}>

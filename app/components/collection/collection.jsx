@@ -5,7 +5,7 @@ import styles from './Collection.module.css'
 const collections = [
   {
     id: 1,
-    // title: "",
+    title: "",
     href: '/collection/nabeeha',
     image: '/collection-banner-NB.png',
   },

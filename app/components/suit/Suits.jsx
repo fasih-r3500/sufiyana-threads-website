@@ -8,7 +8,7 @@ const categories = ['All', 'Suits', 'Shawl']
 
 const allProducts = [
   {
-    id: 1,
+    id: "ST-NB-001",
     image: '/suit.png',
     category: 'Suits',
     name: 'Embroidered Lawn Suit',
