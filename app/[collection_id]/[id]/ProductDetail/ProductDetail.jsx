@@ -12,7 +12,7 @@ export default function ProductDetail({ product }) {
 
   return (
     <div className={styles.page}>
-      <div className={styles.collection} onClick={() => window.location.href = `/${product.collection_code}`}>
+      <div className={styles.collection} onClick={() => window.location.href = `/${product.collection_id}`}>
         ← To {product.collection_name}
       </div>
 
