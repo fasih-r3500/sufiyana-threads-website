@@ -6,19 +6,19 @@ const collections = [
   {
     id: 1,
     title: "",
-    href: '/collection/nabeeha',
+    href: '/NB',
     image: '/collection-banner-NB.png',
   },
   {
     id: 2,
     title: "",
-    href: '/collection/nabeeha',
+    href: '/AT',
     image: '/collection-banner-AT.png',
   },
   {
     id: 3,
     title: "",
-    href: '/collection/nabeeha',
+    href: '/JN',
     image: '/collection-banner-JN.png',
   },
 ]

@@ -1,13 +1,21 @@
-import Collections from './components/collections/collections'
-import HomeComponent from './components/home/home'
-import Suits from './components/suit/Suits'
 import { supabase } from '@/lib/supabase/client'
 import { getImageUrl } from '@/lib/supabase/getImageURL'
+import CollectionDetail from './CollectionDetail/CollectionDetail'
+import { notFound } from 'next/navigation'
 
-export default async function Home() {
+export default async function CollectionPage({ params }) {
+  const { collection_id } = await params
+
   const { data } = await supabase
     .from('Products')
     .select('*')
+    .eq('collection_id', collection_id)
+
+    console.log(data)
+
+    if (!data || data.length === 0) {
+      notFound()
+    }
 
   const products = (data || []).map(p => ({
     id: p.sku,
@@ -20,11 +28,5 @@ export default async function Home() {
     price: p.price,
   }))
 
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <HomeComponent />
-      <Collections />
-      <Suits products={products} />
-    </div>
-  )
+  return ( <CollectionDetail products={products}/> )
 }
