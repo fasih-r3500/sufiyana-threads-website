@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase/client'
 import { getImageUrl } from '@/lib/supabase/getImageURL'
 import CollectionDetail from './CollectionDetail/CollectionDetail'
+import { notFound } from 'next/navigation'
 
 export default async function CollectionPage({ params }) {
   const { collection_id } = await params
@@ -11,6 +12,10 @@ export default async function CollectionPage({ params }) {
     .eq('collection_id', collection_id)
 
     console.log(data)
+
+    if (!data || data.length === 0) {
+      notFound()
+    }
 
   const products = (data || []).map(p => ({
     id: p.sku,
