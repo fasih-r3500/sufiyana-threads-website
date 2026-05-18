@@ -337,9 +337,9 @@
 
 /* ── Reviews ── */
 .reviews {
-  margin-top: 5rem;
+  margin-top: 1rem;
   border-top: 1px solid #e4e4e7;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .reviewsHeading {

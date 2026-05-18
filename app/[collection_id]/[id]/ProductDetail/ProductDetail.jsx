@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import styles from './ProductDetail.module.css'
+import ReactMarkdown from 'react-markdown'
 
 export default function ProductDetail({ product }) {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -153,7 +154,9 @@ export default function ProductDetail({ product }) {
           {/* Description */}
           <div className={styles.descGroup}>
             <h3 className={styles.descHeading}>Product Description</h3>
-            <p className={styles.description}>{product.description}</p>
+            <div className={styles.description}>
+              <ReactMarkdown>{product.description}</ReactMarkdown>
+            </div>
           </div>
         </div>
       </div>

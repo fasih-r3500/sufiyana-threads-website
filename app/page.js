@@ -17,7 +17,7 @@ export default async function Home() {
     collection_id: p.collection_id,
     name: p.name || p.sku,
     rating: p.rating || 0,
-    price: p.price,
+    price: p.price|| 0,
   }))
 
   return (
