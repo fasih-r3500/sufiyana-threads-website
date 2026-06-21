@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown'
 export default function ProductDetail({ product }) {
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedSize, setSelectedSize] = useState(null)
-  const [selectedColor, setSelectedColor] = useState(null)
+  // const [selectedColor, setSelectedColor] = useState(null)
   const [quantity, setQuantity] = useState(1)
 
   return (

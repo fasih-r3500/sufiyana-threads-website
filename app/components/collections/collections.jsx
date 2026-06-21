@@ -21,6 +21,12 @@ const collections = [
     href: '/JN',
     image: '/collection-banner-JN.png',
   },
+  {
+    id: 4,
+    title: "",
+    href: '/SC26',
+    image: '/ST-SC26-CollectionBanner.jpg',
+  },
 ]
 
 export default function Collection() {
