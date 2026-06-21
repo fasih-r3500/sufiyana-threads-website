@@ -10,7 +10,7 @@
   max-width: 1280px;
   min-height:60vh;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   overflow-x: hidden !important;
 }
 
@@ -20,17 +20,33 @@
   font-weight: 500;
   color: #09090b;
   text-align: center;
-  margin: 0 0 0rem;
+  margin: 0 0 2rem; /* Adjusted from 0rem to create space before layout options */
   letter-spacing: -0.03em;
 }
 
-/* ── Categories ── */
+/* ── Controls Layout ── */
+.controlsWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+/* Placeholder element keeping categories perfectly centered horizontally */
+.controlsSpacer {
+  flex: 1;
+  display: block;
+}
+
+/* ── Categories (Keeps items centered) ── */
 .categories {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 3rem;
+  flex: 2; /* Occupies central container structure allocation */
 }
 
 .catBtn {
@@ -63,6 +79,41 @@
   width: 100%;
   height: 1.5px;
   background-color: #09090b;
+}
+
+/* ── Sorting Element ── */
+.sortContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1; /* Aligns container neatly to the right edge */
+}
+
+.sortLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.5rem;
+}
+
+.sortSelect {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #09090b;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.sortSelect:focus, .sortSelect:hover {
+  border-bottom: 1px solid #09090b;
 }
 
 /* ── Grid ── */
@@ -112,8 +163,26 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* Adjust control block layout for tablet/smaller screens */
+  .controlsWrap {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .controlsSpacer {
+    display: none;
+  }
+
   .categories {
     gap: 1.25rem;
+    order: 1;
+  }
+
+  .sortContainer {
+    justify-content: center;
+    order: 2;
+    width: 100%;
   }
 }
 
